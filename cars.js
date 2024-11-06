@@ -1,0 +1,144 @@
+const cars = [
+  {
+    brand: "Toyota",
+    name: "Camry",
+    description: "Reliable and fuel-efficient sedan popular worldwide.",
+    image:
+      "data:image/jpeg;base64,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",
+  },
+  {
+    brand: "Honda",
+    name: "Civic",
+    description: "Compact car known for longevity and low maintenance costs.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Honda_Civic_e-HEV_Sport_%28XI%29_%E2%80%93_f_30062024.jpg/280px-Honda_Civic_e-HEV_Sport_%28XI%29_%E2%80%93_f_30062024.jpg",
+  },
+  {
+    brand: "Ford",
+    name: "Mustang",
+    description: "Iconic American muscle car with powerful performance.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2018_Ford_Mustang_GT_5.0.jpg/280px-2018_Ford_Mustang_GT_5.0.jpg",
+  },
+  {
+    brand: "Chevrolet",
+    name: "Silverado",
+    description: "Strong and durable pickup truck popular in the U.S.",
+    image:
+      "data:image/jpeg;base64,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",
+  },
+  {
+    brand: "BMW",
+    name: "3 Series",
+    description: "German luxury sedan with sporty driving experience.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/BMW_G20_%282022%29_IMG_7316_%282%29.jpg/280px-BMW_G20_%282022%29_IMG_7316_%282%29.jpg",
+  },
+  {
+    brand: "Mercedes-Benz",
+    name: "E-Class",
+    description: "Premium sedan with high comfort and advanced features.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Mercedes-Benz_W214_1X7A1841.jpg/280px-Mercedes-Benz_W214_1X7A1841.jpg",
+  },
+  {
+    brand: "Audi",
+    name: "A4",
+    description: "Compact luxury car with innovative technology and design.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg/280px-Audi_A4_B9_sedans_%28FL%29_1X7A2441.jpg",
+  },
+  {
+    brand: "Volkswagen",
+    name: "Golf",
+    description: "Compact car with a reliable build and German engineering.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Volkswagen_Golf_VIII_Facelift_IMG_0375.jpg/280px-Volkswagen_Golf_VIII_Facelift_IMG_0375.jpg",
+  },
+  {
+    brand: "Hyundai",
+    name: "Elantra",
+    description: "Affordable sedan with advanced features and modern style.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Hyundai_Avante_CN7_white_%2810%29_%28cropped%29.jpg/280px-Hyundai_Avante_CN7_white_%2810%29_%28cropped%29.jpg",
+  },
+  {
+    brand: "Kia",
+    name: "Sportage",
+    description: "Compact SUV with stylish design and solid warranty.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/2022_Kia_Sportage_GT-Line_ISG_HEV_Automatic_1.6_Front.jpg/280px-2022_Kia_Sportage_GT-Line_ISG_HEV_Automatic_1.6_Front.jpg",
+  },
+  {
+    brand: "Nissan",
+    name: "Altima",
+    description: "Midsize sedan with reliable performance and comfort.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/2023_Nissan_Altima_SR_in_Brilliant_Silver_Metallic%2C_front_right.jpg/280px-2023_Nissan_Altima_SR_in_Brilliant_Silver_Metallic%2C_front_right.jpg",
+  },
+  {
+    brand: "Tesla",
+    name: "Model 3",
+    description: "Electric sedan with cutting-edge technology and great range.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/2019_Tesla_Model_3_Performance_AWD_Front.jpg/280px-2019_Tesla_Model_3_Performance_AWD_Front.jpg",
+  },
+  {
+    brand: "Mazda",
+    name: "MX-5 Miata",
+    description: "Sporty, fun-to-drive roadster with responsive handling.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Mazda_Roadster_%28MX-5%29_by_Negawa_Bridge_%28cropped%29.jpg/280px-Mazda_Roadster_%28MX-5%29_by_Negawa_Bridge_%28cropped%29.jpg",
+  },
+  {
+    brand: "Subaru",
+    name: "Outback",
+    description:
+      "Rugged, all-wheel-drive SUV suitable for off-road adventures.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/2023_Subaru_Outback_Premium%2C_front_right%2C_09-09-2023.jpg/280px-2023_Subaru_Outback_Premium%2C_front_right%2C_09-09-2023.jpg",
+  },
+  {
+    brand: "Volvo",
+    name: "XC90",
+    description: "Luxury SUV with a focus on safety and sleek design.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/2018_Volvo_XC90_2.0.jpg/280px-2018_Volvo_XC90_2.0.jpg",
+  },
+  {
+    brand: "Jaguar",
+    name: "F-Type",
+    description: "High-performance British sports car with elegant styling.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/2017_Jaguar_F-Type_V6_R-Dynamic_Automatic_3.0_Front.jpg/280px-2017_Jaguar_F-Type_V6_R-Dynamic_Automatic_3.0_Front.jpg",
+  },
+  {
+    brand: "Land Rover",
+    name: "Range Rover",
+    description: "Luxury SUV with off-road capability and a premium feel.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/2022_Land_Rover_Range_Rover_SE_P440e_AWD_Automatic_3.0_Front.jpg/280px-2022_Land_Rover_Range_Rover_SE_P440e_AWD_Automatic_3.0_Front.jpg",
+  },
+  {
+    brand: "Ferrari",
+    name: "488 GTB",
+    description: "Italian supercar known for its speed and exotic design.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2017_Ferrari_488_GTB_Automatic_3.9.jpg/280px-2017_Ferrari_488_GTB_Automatic_3.9.jpg",
+  },
+  {
+    brand: "Lamborghini",
+    name: "Huracan",
+    description: "High-performance Italian supercar with a bold look.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/2017_Lamborghini_Huracan_LP610.jpg/280px-2017_Lamborghini_Huracan_LP610.jpg",
+  },
+  {
+    brand: "Porsche",
+    name: "911",
+    description: "Iconic German sports car known for luxury and performance.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Porsche_911_No_1000000%2C_70_Years_Porsche_Sports_Car%2C_Berlin_%281X7A3888%29.jpg/280px-Porsche_911_No_1000000%2C_70_Years_Porsche_Sports_Car%2C_Berlin_%281X7A3888%29.jpg",
+  },
+];
+export default cars;
