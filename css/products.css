@@ -1,3 +1,11 @@
+h1 {
+  font-size: 3rem;
+  padding: 50px;
+  display: none;
+}
+.products {
+  display: none;
+}
 .product {
   display: flex;
   padding: 50px;
@@ -39,4 +47,35 @@
 }
 .buy-btn:hover {
   background-color: #010101b0;
+}
+.loading {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading p {
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: bold;
+  animation-name: entry;
+  animation-duration: 1000ms;
+  animation-timing-function: linear;
+  transform: translateX(1000px);
+}
+
+@keyframes entry {
+  0% {
+    transform: translateX(-1000px);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(1000px);
+  }
 }

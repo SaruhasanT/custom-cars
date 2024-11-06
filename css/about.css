@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  color: black;
+}
+h2 {
+  font-size: 1.5rem;
+}
+.hero {
+  text-align: center;
+  padding: 50px;
+  color: white;
+}
+.hero h1 {
+  font-size: 36px;
+}
+
+.section {
+  margin: 20px 0;
+}
+.cta {
+  text-align: center;
+  margin: 40px 0;
+}
+ul {
+  list-style: none;
+}
+.section p,
+.section li {
+  font-size: 0.9rem;
+}

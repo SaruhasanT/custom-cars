@@ -1,6 +1,7 @@
 import cars from "./cars.js";
 const products = document.querySelector(".products");
-
+const heading = document.querySelector("h1");
+const loading = document.querySelector(".loading");
 cars.forEach((car) => {
   const elem = document.createElement("div");
   elem.className = "product";
@@ -18,4 +19,8 @@ cars.forEach((car) => {
   products.appendChild(elem);
 });
 
-console.log("prodcuts");
+setTimeout(() => {
+  products.style.display = "block";
+  heading.style.display = "block";
+  loading.style.display = "none";
+}, 1000);
